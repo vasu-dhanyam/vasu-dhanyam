@@ -2,21 +2,18 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Vasu Online Store" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Vasu dhanyam Store" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "vasu dhanyam store - chennai" %>">
+    <meta name="author" content="vasu-muthu">
+    <link rel="shortcut icon" href="<%= asset_path 'favicon.ico' %>">
+
+
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <!-- Bootstrap core CSS -->
-
-    <!-- Add custom CSS here -->
     <%= stylesheet_link_tag "modern-business", media: "all", "data-turbolinks-track" => true %>
-    <!-- JavaScript -->
     <%= javascript_include_tag "bootstrap", "data-turbolinks-track" => true %>
-
     <%= javascript_include_tag "jquery-1.10.2", "data-turbolinks-track" => true %>
-
-
     <%= javascript_include_tag "modern-business", "data-turbolinks-track" => true %>
 
     <%= csrf_meta_tags %>
