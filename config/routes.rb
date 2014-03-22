@@ -1,4 +1,6 @@
 Finalversion::Application.routes.draw do
+  resources :produits
+
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,7 +12,7 @@ Finalversion::Application.routes.draw do
   match "contact", :to=>"contacts#contact", :via=> :get, :as=> :contact
   match "home", :to=>"visitors#new", :via=> :get, :as=> :visitor
 
-  match 'products', :to=>'products#index', :via=> :get, :as=> :products_display
+  match 'products', :to=>'produits#index', :via=> :get, :as=> :products_display
 
   match 'about' , :to =>'contacts#about' ,:via => :get, :as => :about
   match 'services' , :to =>'contacts#services' ,:via => :get, :as => :services

@@ -1,0 +1,37 @@
+<h1>Listing produits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Measure</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>Available</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @produits.each do |produit| %>
+      <tr>
+        <td><%= produit.name %></td>
+        <td><%= produit.quantity %></td>
+        <td><%= produit.measure %></td>
+        <td><%= produit.price %></td>
+        <td><%= produit.status %></td>
+        <td><%= produit.available %></td>
+        <td><%= link_to 'Show', produit %></td>
+        <td><%= link_to 'Edit', edit_produit_path(produit) %></td>
+        <td><%= link_to 'Destroy', produit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Produit', new_produit_path %>
