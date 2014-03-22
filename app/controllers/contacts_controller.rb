@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
     render 'pages/services'
   end
   def other
-    render 'pages/otherpage'
+    render 'pages/other'
   end
   def blog
     render 'pages/blog'
